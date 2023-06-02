@@ -12,9 +12,9 @@ function PokemonInfo() {
     <>
       {loading && <div>Loading...</div>}
       {!loading && pokemon && (
-        <div>
-          <h1 className="display-3 text-center">{pokemon?.name}</h1>
-          <img src={`${pokemonConstants.urlImage}${pokemon?.id}.png`} alt={pokemon?.name} />
+        <div className="text-center">
+          <h1 className="display-3">{pokemon?.name.toUpperCase()}</h1>
+          <img src={`${pokemonConstants.urlImage}${pokemon?.id}.png`} alt={pokemon?.name} loading="lazy" />
         </div>
       )}    
     </>

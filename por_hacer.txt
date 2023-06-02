@@ -1,0 +1,3 @@
+- completar la info de pokemons
+- buscador con autocompletado
+- paginacion en la home

@@ -10,9 +10,9 @@ function PokemonCard(props: PokemonCardProps){
     return(
         <div className="card col-lg-3 col-sm-4">
             <Link to={`/pokemon/${props.name}`} className="text-dark text-center text-decoration-none">
-                <img className="card-img-top" src={props.img} alt={`image for ${props.name}`} /> 
+                <img className="card-img-top" src={props.img} alt={`image for ${props.name.toUpperCase()}`} /> 
                 <div className="card-body">
-                    <h5 className="card-title">{props.name}</h5>
+                    <h5 className="card-title">{props.name.toUpperCase()}</h5>
                         
                 </div>
             </Link>
