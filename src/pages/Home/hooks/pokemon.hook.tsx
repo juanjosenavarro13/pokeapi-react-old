@@ -8,6 +8,7 @@ import type { pokemonShowHome, result } from "../models/pokemon.model";
 export const useFetchPokemons = () => {
 
   const [pokemons, setPokemons] = useState<pokemonShowHome[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
 
@@ -19,8 +20,9 @@ export const useFetchPokemons = () => {
         }
       })
       setPokemons(pokemonsData);
+      setLoading(false);
     });
   }, []);
   
-  return pokemons;
+  return {pokemons, loading};
 }

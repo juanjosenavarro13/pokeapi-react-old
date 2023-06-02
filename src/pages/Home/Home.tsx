@@ -4,16 +4,21 @@ import { useFetchPokemons } from "./hooks/pokemon.hook";
 
 function Home() {
 
-  const pokemons = useFetchPokemons();
+  const {pokemons, loading} = useFetchPokemons();
 
   return (
-    <div className="row">
-      {pokemons.map((pokemon, key) => {
-        return (
-          <PokemonCard key={key} name={pokemon.name} img={pokemon.img} />
-        )
-      })}
-    </div>
+    <>
+      {loading && <div>Loading...</div>}
+      {!loading && pokemons && (
+        <div className="row">
+          {pokemons.map((pokemon, key) => {
+            return (
+              <PokemonCard key={key} name={pokemon.name} img={pokemon.img} />
+            )
+          })}
+        </div>
+      )}
+    </>
   );
 }
 
