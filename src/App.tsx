@@ -7,7 +7,6 @@ import NotFound from "./pages/NotFound/notFound";
 function App() {
 
   return (
-    <>
       <div className="container">
         <BrowserRouter>
           <Routes>
@@ -19,7 +18,6 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
-    </>
   )
 }
 

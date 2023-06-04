@@ -11,7 +11,7 @@ export const useFetchPokemons = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-
+    setLoading(true);
     fetchPokemons().then((pokemons) => {
       const pokemonsData = pokemons.results.map((pokemon: result) => {
         return {
